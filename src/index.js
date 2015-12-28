@@ -16,7 +16,9 @@ class Yelp {
       opts.consumer_secret,
       opts.version || '1.0',
       null,
-      'HMAC-SHA1'
+      'HMAC-SHA1',
+      opts.signature_method_size || 32,
+      opts.headers
     );
   }
 
